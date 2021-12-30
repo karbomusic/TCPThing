@@ -1,6 +1,6 @@
 # TCPThing
 
-This app is for testing various TCP connections and socket options and/or various TCP connection based testing. Right now only TCP keep-alive (in minutes) is configurable by passing via comand line arguments. It needs some refactoring, cleanup and better coding but it's something I modify as needed since it's just a test tool for corner-case issues.
+This app is for testing various TCP connections and socket options and/or various TCP connection based testing. Right now only TCP keep-alive (in minutes) is configurable by passing via comand line arguments. It needs some refactoring and cleanup but it's something I modify as needed since it's just a test tool for corner-case issues.
 
 Ideally you can run as as a client on machine A and a server (listener) on machine B, or the same machine for that matter and connect client to server. Just set the 3rd argument to toggle (1=server, 0=client). Or you can just use it as a client to connect to the endpoint of your choice. TCPThing will attempt to perform a DNS lookup if a hostname is provided instead of an IP address.
 
