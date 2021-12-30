@@ -4,7 +4,7 @@ This app is for testing various TCP connections and socket options and/or variou
 
 Ideally you can run as as a client on machine A and a server (listener) on machine B, or the same machine for that matter and connect client to server. Just set the 3rd argument to toggle (1=server, 0=client). Or you can just use a single instance as a client to connect to the endpoint of your choice. TCPThing will attempt to perform a DNS lookup if a hostname is provided instead of an IP address.
 
-#### USAGE: **TCPThing &lt;IPAddress | Hostname&gt; &lt;TCPPort&gt; &lt;IsServer {0|1}&gt; [KeepAlive {0=SystemSetting|UserValue}]** 
+#### USAGE: **TCPThing &lt;IPAddress | Hostname&gt; &lt;TCPPort&gt; &lt;IsServer {0|1}&gt; [KeepAlive {0=SystemSetting | UserValue}]** 
   
   ### Examples  
 
