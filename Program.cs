@@ -160,7 +160,7 @@ namespace TCPThing
                     Console.Title = "TCPThing as Server";
                     listener = new TcpListener(ip, port);
 
-                    // setup keep-alive for server if arg 4 > 0
+                    // setup keep-alive for server if arg 4 > -1
                     if (userKeepAliveTime > -1)
                     {
                         listener.Server.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
@@ -189,7 +189,7 @@ namespace TCPThing
 
                     client = new TcpClient();
 
-                    // setup keep-alive for client if arg 4 > 0
+                    // setup keep-alive for client if arg 4 > -1
                     if (userKeepAliveTime > -1)
                     {
                         client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
