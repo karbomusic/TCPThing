@@ -96,7 +96,8 @@ namespace TCPThing
                 Int32.TryParse(systemKeepAliveRegTime.ToString(), out systemKeepAliveTime);
             }
 
-            // Enable keep-alive if 4th exists. If the value is 0 use system setting, otherwise use the 4th arg as the value
+            // Enable keep-alive if 4th argument exists. If the value is 0 use system setting, 
+            // otherwise use the 4th arg as the user-supplied value
             if (args.Length == 4)
             {
                 Int32.TryParse(args[3], out int tempVal);
