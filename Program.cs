@@ -67,7 +67,6 @@ namespace TCPThing
 
         static void Main(string[] args)
         {
-
             PrintTitle();
 
             if (args.Length < 3)
