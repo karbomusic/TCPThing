@@ -97,7 +97,6 @@ namespace TCPThing
             }
 
             // Enable keep-alive if 4th exists. If the value is 0 use system setting, otherwise use the 4th arg as the value
-            // BUG: should be ==0 and >0
             if (args.Length == 4)
             {
                 Int32.TryParse(args[3], out int tempVal);
