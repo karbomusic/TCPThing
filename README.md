@@ -6,13 +6,15 @@ This app is for testing various TCP connections and socket options and/or variou
 
 #### USAGE: **TCPThing &lt;IPAddress&gt; &lt;TCPPort&gt; &lt;IsServer {0|1}&gt; [KeepAlive]** 
   
-  Create a listener: **TCPThing 127.0.0.1 80 1 0**  
-  Create a client: **TCPThing 127.0.0.1 80 0 0**    
-  Create a listener w/keep-alive: **TCPThing 127.0.0.1 80 1 1**  
-  Create a client w/keep-alive: **TCPThing 127.0.0.1 80 0 1**  
-  Create a client w/keep-alive of 30 seconds: **TCPThing 127.0.0.1 80 0 30**  
-  Create a server w/keep-alive of 1 minute: **TCPThing 127.0.0.1 80 1 60**  
-  Create a client w/keep-alive system default values: **TCPThing 127.0.0.1 80 0 0**   
+  ### Examples  
+
+  Create a listener on port 80: **TCPThing 127.0.0.1 80 1 0**  
+  Create a client on port 80: **TCPThing 127.0.0.1 80 0 0**    
+  Create a listener w/keep-alive on port 50000: **TCPThing 127.0.0.1 5000 1 1**  
+  Create a client w/keep-alive of 1 minutes: **TCPThing 127.0.0.1 80 0 1**  
+  Create a client w/keep-alive of 30 minutes: **TCPThing 127.0.0.1 80 0 30**  
+  Create a server w/keep-alive of 4 minutes on port 8081: **TCPThing 127.0.0.1 8081 1 4**  
+  Create a client on port 80 w/keep-alive using system default values: **TCPThing 127.0.0.1 80 0 0**   
   
   
-  Note: When running as a server on a remote machine, you must ensure the port used is open in the firewall. This app also does not pass any data or packets. It's essentially a glorified TCP Handshake creation tool with the ability to set keep-alive time.
+Note: When running as a server on a remote machine, you must ensure the port used is open in the firewall. This app also does not pass any data or packets. It's essentially a glorified TCP Handshake creation tool with the ability to set keep-alive time.
