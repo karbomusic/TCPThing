@@ -169,7 +169,6 @@ namespace TCPThing
                     }
 
                     listener.Start();
-
                     Console.WriteLine("TCPThing is listening...");
                     Console.WriteLine("IP:{0}", args[0]);
                     Console.WriteLine("Port:{0}\r\n", port);
