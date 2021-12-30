@@ -22,7 +22,7 @@ Ideally you can run as as a client on machine A and a server (listener) on machi
 Note: When running as a server on a remote machine, you must ensure the port used is open in the firewall. This app does not pass any data or packets. It's essentially a glorified TCP Handshake creation tool with the ability to set keep-alive time. See comments at the top of program.cs for additional usage information.
 
 Requirements:
-- Windows 8/10/11 with .NET 4.5 (port to .Net core pending)
+- Windows 8/10/11 with .NET 4.5 (port to .NET Core pending).
 
 Build:   
 - Clone to a local directory: **git clone https://github.com/karbomusic/TCPThing.git**
