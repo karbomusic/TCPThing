@@ -84,7 +84,7 @@ namespace TCPThing
                 PrintMessage("Create a client w/keep-alive system default values: TCPThing 127.0.0.1 80 0 1");
                 PrintMessage(String.Empty);
 
-                // Whenever we land here, hitting any key to exit.
+                // Press any key to exit.
                 Console.ReadKey();
                 rtnVal = unchecked((int)0x80070057); //ArgumentException for console return code
                 Environment.Exit(rtnVal);
