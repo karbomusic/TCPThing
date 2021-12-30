@@ -54,7 +54,7 @@ namespace TCPThing
         static TcpClient client;
         static IPAddress ip = null;
         static int port = 0;
-        static int userKeepAliveTime = 0;
+        static int userKeepAliveTime = -1;
         static int systemKeepAliveTime = 120;
         static object systemKeepAliveRegTime;
         static string keepAliveChosenText = "None";
@@ -101,7 +101,7 @@ namespace TCPThing
             if (args.Length == 4)
             {
                 Int32.TryParse(args[3], out int tempVal);
-                if (tempVal == 1)
+                if (tempVal == 0)
                 {
                     userKeepAliveTime = systemKeepAliveTime;
                     keepAliveChosenText = "System";
@@ -161,7 +161,7 @@ namespace TCPThing
                     listener = new TcpListener(ip, port);
 
                     // setup keep-alive for server if arg 4 > 0
-                    if (userKeepAliveTime > 0)
+                    if (userKeepAliveTime > -1)
                     {
                         listener.Server.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
                         byte[] keepAliveVals = { 0x01, 0x00, 0x00, 0x00, 0x10, 0x27, 0x00, 0x00, 0x98, 0x3a, 0x00, 0x00 };
@@ -190,7 +190,7 @@ namespace TCPThing
                     client = new TcpClient();
 
                     // setup keep-alive for client if arg 4 > 0
-                    if (userKeepAliveTime > 0)
+                    if (userKeepAliveTime > -1)
                     {
                         client.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
                         byte[] keepAliveVals = { 0x01, 0x00, 0x00, 0x00, 0x10, 0x27, 0x00, 0x00, 0x98, 0x3a, 0x00, 0x00 };
