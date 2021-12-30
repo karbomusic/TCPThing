@@ -21,4 +21,5 @@ Ideally you can run as as a client on machine A and a server (listener) on machi
  
 Note: When running as a server on a remote machine, you must ensure the port used is open in the firewall. This app does not pass any data or packets. It's essentially a glorified TCP Handshake creation tool with the ability to set keep-alive time. See comments at the top of program.cs for additional usage information.
 
+Binaries: You can download the binaries, instead of building, from the /bin/release folder.
 
