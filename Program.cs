@@ -42,7 +42,6 @@ Create a client w/keep-alive of 30 minutes: TCPThing 127.0.0.1 80 0 30
 Create a server w/keep-alive of 4 minutes on port 8081: TCPThing 127.0.0.1 8081 1 4
 Create a client on port 80 w/keep-alive using system default values: TCPThing 127.0.0.1 80 0 0
 
-
 Note: When running as a server on a remote machine, you must ensure the port used is open in the firewall.
 
  */
@@ -51,7 +50,6 @@ namespace TCPThing
 {
     class Program
     {
-
         static TcpListener listener;
         static TcpClient client;
         static IPAddress ip = null;
@@ -104,12 +102,12 @@ namespace TCPThing
             if (args.Length == 4)
             {
                 Int32.TryParse(args[3], out int tempVal);
-                if(tempVal == 1)
+                if (tempVal == 1)
                 {
                     userKeepAliveTime = systemKeepAliveTime;
                     keepAliveChosenText = "System";
                 }
-                else if(tempVal > 0)
+                else if (tempVal > 0)
                 {
                     userKeepAliveTime = tempVal;
                     keepAliveChosenText = "User";
@@ -119,7 +117,6 @@ namespace TCPThing
 
             try
             {
-
                 #region Setup
                 // uses dns if hostname supplied as first argument, the IP if the IP is supplied. 
                 // If neither are supplied, uses the first IP returned if there are multiple IPs on the box.
@@ -183,19 +180,17 @@ namespace TCPThing
                     Console.WriteLine("System Keep-Alive: {0}", systemKeepAliveTime);
                     Console.WriteLine("Keep-Alive in use: {0}\r\n", keepAliveChosenText);
                     DoListen(listener);
-
                 }
                 #endregion
                 else // Act as client if server/client arg is 0
                 #region Client
                 {
-
                     Console.Title = "TCPThing as Client";
 
                 reconnect:
 
                     client = new TcpClient();
-                  
+
                     // setup keep-alive for client if arg 4 > 0
                     if (userKeepAliveTime > 0)
                     {
@@ -206,7 +201,6 @@ namespace TCPThing
 
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("TCPThing is connecting to {0}:{1}...\r\n", args[0], port);
-
                     stopWatch.Start();
                     client.Connect(args[0], port);
 
@@ -220,7 +214,7 @@ namespace TCPThing
                         Console.WriteLine("System Keep-Alive: {0}", systemKeepAliveTime);
                         Console.WriteLine("Keep-Alive in use: {0}", keepAliveChosenText);
                         Console.WriteLine("TCP Latency: " + stopWatch.ElapsedMilliseconds.ToString() + "ms\r\n");
-                        
+
                     }
                     else
                     {
@@ -247,7 +241,6 @@ namespace TCPThing
                         client.Client.Close();
                         client.Close();
                     }
-
                     goto reconnect;
                 }
                 #endregion
@@ -266,12 +259,11 @@ namespace TCPThing
             Console.ReadKey();
             Environment.Exit(rtnVal);
         }
-        
+
         static void DoListen(TcpListener listener)
         {
-            // This method is just for the server. It constantly listens for new connections.
-           
-            waitForNextConnection:
+        // This method is just for the server. It constantly listens for new connections.
+        waitForNextConnection:
 
             Socket socket = listener.AcceptSocket(); // this is a blocking call which stalls until a new connection arrives.
             Console.ForegroundColor = ConsoleColor.Green;
@@ -296,9 +288,9 @@ namespace TCPThing
             //    }
             //}
 
-           // Console.WriteLine("Socket closed, waiting for new connection...");
+            // Console.WriteLine("Socket closed, waiting for new connection...");
 
-            goto waitForNextConnection;
+        goto waitForNextConnection;
         }
 
         static void PrintTitle()
