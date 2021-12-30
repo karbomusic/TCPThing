@@ -239,7 +239,6 @@ namespace TCPThing
                     goto reconnect;
                 }
                 #endregion
-
             }
             catch (Exception ex)
             {
