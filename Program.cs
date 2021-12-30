@@ -23,7 +23,7 @@ cleanup and better coding but it's something I modify as needed
 since it's just a test tool for corner-case issues.
 
 
-Usage: TCPThing <IP> <Port> <IsServer {0|1}> [UseKeepAlives] 
+USAGE: TCPThing <IPAddress | Hostname> <TCPPort> <IsServer {0|1}> [KeepAlive {0=SystemSetting | UserValue}]
 
 Arg1 <required>: The IP
 Arg2 <required>: The port
