@@ -16,9 +16,13 @@ Ideally you can run as as a client on machine A and a server (listener) on machi
   Create a server w/keep-alive of 4 minutes on port 8081: **TCPThing 127.0.0.1 8081 1 4**  
   Create a client on port 80 w/keep-alive using system default values: **TCPThing 127.0.0.1 80 0 0**     
   <br>
-      
+  Acting as server and client on a single machine:  
+  <br>
   ![Example Image](./example.png)   
- 
+   <br>  
+   Acting as a client and creating a TCP connection to a website (handshake only, returns no data):  <br>  
+  ![Example Image](./example2.png)
+  <br>  
 Note: When running as a server on a remote machine, you must ensure the port used is open in the firewall. This app does not pass any data beyond TCP handshake packets. It's essentially a glorified TCP Handshake tool with the ability to set keep-alive time. See comments at the top of program.cs for additional usage information.
 
 Requirements:
