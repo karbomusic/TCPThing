@@ -111,7 +111,6 @@ namespace TCPThing
                     userKeepAliveTime = tempVal;
                     keepAliveChosenText = "User";
                 }
-
             }
 
             try
@@ -213,7 +212,6 @@ namespace TCPThing
                         Console.WriteLine("System Keep-Alive: {0}", systemKeepAliveTime);
                         Console.WriteLine("Keep-Alive in use: {0}", keepAliveChosenText);
                         Console.WriteLine("TCP Latency: " + stopWatch.ElapsedMilliseconds.ToString() + "ms\r\n");
-
                     }
                     else
                     {
@@ -230,7 +228,6 @@ namespace TCPThing
                     Console.Write("\r\nPress any key to reconnect...");
                     Console.ReadKey();
                     Console.WriteLine("\r\n");
-
                     stopWatch.Reset();
 
                     if (client.Connected)
