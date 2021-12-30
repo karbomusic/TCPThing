@@ -22,7 +22,6 @@ is configurable by passing in arguments. It needs some refactoring,
 cleanup and better coding but it's something I modify as needed 
 since it's just a test tool for corner-case issues.
 
-
 USAGE: TCPThing <IPAddress | Hostname> <TCPPort> <IsServer {0|1}> [KeepAlive {0=SystemSetting | UserValue}]
 
 Arg1 <required>: The IP
