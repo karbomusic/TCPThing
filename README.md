@@ -4,7 +4,7 @@ This app is for testing various TCP connections and socket options and/or variou
 
   Ideally you can run as as a client on machine A and a server on machine B, or the same machine for that matter and connect client to server. Just set the 3rd argument to toggle (1=server, 0=client)
 
-USAGE: **TCPThing <IP> <Port> <IsServer {0|1}> [KeepAlive]**  
+USAGE: **TCPThing <IPAddress> <TCPPort> <IsServer {0|1}> [KeepAlive]**  
   
   Create a listener: **TCPThing 127.0.0.1 80 1 0**  
   Create a client: **TCPThing 127.0.0.1 80 0 0**    
