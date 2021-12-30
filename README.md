@@ -2,7 +2,7 @@
 
 This app is for testing various TCP connections and socket options and/or various TCP connection based testing. Right now only TCP keep-alive is configurable by passing in arguments. It needs some refactoring, cleanup and better coding but it's something I modify as needed since it's just a test tool for corner-case issues.
 
-  Ideally you can run as as a client on machine A and a server on machine B, or the same machine for that matter and connect client to server. Just set the 3rd argument to toggle (1=server, 2=client)
+  Ideally you can run as as a client on machine A and a server on machine B, or the same machine for that matter and connect client to server. Just set the 3rd argument to toggle (1=server, 0=client)
 
   Create a listener: **TCPThing 127.0.0.1 80 1 0**  
   Create a client: **TCPThing 127.0.0.1 80 0 0**    
