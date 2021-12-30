@@ -4,7 +4,7 @@ This app is for testing various TCP connections and socket options and/or variou
 
   Ideally you can run as as a client on machine A and a server on machine B, or the same machine for that matter and connect client to server. Just set the 3rd argument to toggle (1=server, 0=client)
 
-#### USAGE: **TCPThing &lt;IPAddress&gt; &lt;TCPPort&gt; &lt;IsServer {0|1}&gt; [KeepAlive]** 
+#### USAGE: **TCPThing &lt;IPAddress | Hostname&gt; &lt;TCPPort&gt; &lt;IsServer {0|1}&gt; [KeepAlive]** 
   
   ### Examples  
 
@@ -16,5 +16,8 @@ This app is for testing various TCP connections and socket options and/or variou
   Create a server w/keep-alive of 4 minutes on port 8081: **TCPThing 127.0.0.1 8081 1 4**  
   Create a client on port 80 w/keep-alive using system default values: **TCPThing 127.0.0.1 80 0 0**   
   
-  
-Note: When running as a server on a remote machine, you must ensure the port used is open in the firewall. This app also does not pass any data or packets. It's essentially a glorified TCP Handshake creation tool with the ability to set keep-alive time.
+  ![Example Image](./example.png)   
+ 
+Note: When running as a server on a remote machine, you must ensure the port used is open in the firewall. This app does not pass any data or packets. It's essentially a glorified TCP Handshake creation tool with the ability to set keep-alive time.
+
+
