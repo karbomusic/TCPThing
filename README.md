@@ -2,7 +2,7 @@
 
 This app is for TCP connection based testing. Currently only the TCP keep-alive socket option (in minutes) is configurable via comand line arguments. It needs some refactoring and cleanup but it's something I modify as needed since it's just a test tool for corner-case issues. I originally wrote this to use with Wireshark to test and demonstrate how TCP Keep-Alive options in windows actually behave on the wire.
 
-You can run TCPThing as a client on one computer, and a server (listener) on another computer for example; or the same machine for that matter and connect client to server. Set server or client behavior by modifying the 3rd argument (1=server or 0=client). Or you can run a single instance as a client to connect to the endpoint of your choice. You could also run it as a server, then connnect from another endpoint using telnet. TCPThing will attempt to perform a DNS lookup if a hostname is provided instead of an IP address.
+You can run TCPThing as a client on one computer, and a server (listener) on another computer for example; or the same machine for that matter and connect client to server. Set server or client mode by modifying the 3rd argument (1=server or 0=client). Or you can run a single instance as a client to connect to the endpoint of your choice. You could also run it as a server, then connnect from another endpoint using telnet. TCPThing will attempt to perform a DNS lookup if a hostname is provided instead of an IP address in both cliend and server modes.
 
 #### USAGE: **TCPThing &lt;IPAddress | Hostname&gt; &lt;TCPPort&gt; &lt;IsServer {0|1}&gt; [KeepAlive {0=SystemSetting | UserValue}]** 
   
@@ -35,4 +35,4 @@ Build:
 Binaries:  
 - You can download the latest binaries from the /bin/release folder.
 
-ToDo: Add option to set TCPKeepAliveInterval
+ToDo: Add option to set TCPKeepAliveInterval, better clarify IP/ports in displayed outputs.
