@@ -4,7 +4,7 @@ This app is for TCP connection based testing. Currently only the TCP keep-alive 
 
 You can run TCPThing as a client on one computer, and a server (listener) on another computer for example; or the same machine for that matter and connect client to server. Set server or client mode by modifying the 3rd argument (1=server or 0=client). Or you can run a single instance as a client to connect to the endpoint of your choice. 
 
-You can also run it as a server, then connnect from another endpoint using telnet. TCPThing will attempt to perform a DNS lookup if a hostname is provided instead of an IP address in both cliend and server modes. It's primary purpose is to be used in tandem with Wireshark, Netmon, Nestsh or other network trace tool.
+You can also run it as a server, then connnect from another endpoint using telnet. TCPThing will attempt to perform a DNS lookup if a hostname is provided instead of an IP address in both client and server modes. It's primary purpose is to be used in tandem with Wireshark, Netmon, Nestsh or other network trace tool.
 
 #### USAGE: **TCPThing &lt;IPAddress | Hostname&gt; &lt;TCPPort&gt; &lt;IsServer {0|1}&gt; [KeepAlive {0=SystemSetting | UserValue}]** 
   
