@@ -1,5 +1,4 @@
 TCPThing.csproj.user
 /obj
 /.vs
-
-
+/bin
